@@ -1,14 +1,7 @@
-/* eslint-disable no-restricted-globals */
 export default function iterateThroughObject(reportWithIterator) {
-  let output = '';
-
-  for (const [index, item] of Object.entries(reportWithIterator)) {
-    output += `${item}`;
-
-    if (parseInt(index) !== reportWithIterator.length - 1) {
-      output += ' | ';
-    }
+  const employees = [];
+  for (const item of reportWithIterator) {
+    employees.push(item);
   }
-
-  return output;
+  return employees.join(' | ');
 }
